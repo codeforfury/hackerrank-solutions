@@ -2,6 +2,7 @@
 
 **Difficulty:** Unknown
 **Category:** python
+**Language:** unknown
 **Link:** https://www.hackerrank.com/challenges/py-hello-world/problem
 
 ---
