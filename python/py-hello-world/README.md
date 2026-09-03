@@ -8,6 +8,7 @@
 ---
 
 |
+PreparePythonIntroductionSay "Hello, World!" With Python
 Exit Full Screen View
 Problem	Submissions	Leaderboard	Discussions	Editorial	Tutorial
 
@@ -43,25 +44,8 @@ Language
 Python 3
 More
 1
-p
-r
-i
-n
-t
-(
-"
-H
-e
-l
-l
-o
-,
- 
-W
-o
-r
-l
-d
+2
+print("Hello, World!")
 Line: 2 Col: 1
 Submit Code
 Run Code
@@ -73,8 +57,4 @@ Share on X
 Share on LinkedIn
 Next Challenge
 Test case 0
-Compiler Message
-Success
-Expected Output
-Download
-Hello, World!
+Loading testcase ...
