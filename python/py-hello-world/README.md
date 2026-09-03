@@ -57,8 +57,4 @@ Share on X
 Share on LinkedIn
 Next Challenge
 Test case 0
-Compiler Message
-Success
-Expected Output
-Download
-Hello, World!
+Loading testcase ...
