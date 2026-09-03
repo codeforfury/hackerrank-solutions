@@ -40,14 +40,12 @@ Hello, World!
 
 Change Theme
 Language
-Pypy 3
+Python 3
 More
 1
 2
-3
-if __name__ == '__main__':
-    print("Hello, World!")
-Line: 3 Col: 1
+print("Hello, World!")
+Line: 2 Col: 1
 Submit Code
 Run Code
 Upload Code as File
