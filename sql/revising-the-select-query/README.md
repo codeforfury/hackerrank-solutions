@@ -21,21 +21,20 @@ Language
 DB2
 More
 1
+4
+5
 2
 3
-SELECT *
+6
+/* THIS IS A TEST */
 FROM CITY
 WHERE COUNTRYCODE = 'USA' AND POPULATION > 100000;
-Line: 1 Col: 9
+SELECT *
+Line: 1 Col: 21
 Submit Code
 Run Code
 Upload Code as File
 Test against custom input
-Sql
-You have earned 10.00 points!
-You are now 70 points away from the 1st star for your sql badge.
-13%
-10/80
 Congratulations
 You solved this challenge. Would you like to challenge your friends?
 Share on X
