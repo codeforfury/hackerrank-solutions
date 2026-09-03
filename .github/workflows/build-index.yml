@@ -1,0 +1,48 @@
+name: Build Index Files
+
+on:
+  push:
+    # Rebuild the index tables whenever a new solution is pushed
+    branches: [main]
+    paths:
+      - "data-structures/**"
+      - "python/**"
+      - "sql/**"
+      - "databases/**"
+      - "linux-shell/**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+    # Skip runs triggered by this workflow itself to avoid infinite loop
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build index files
+        run: python 0-scripts/build_index.py
+
+      - name: Commit and push index
+        run: |
+          git config user.name "codeforfury"
+          git config user.email "dasrajiv6507@gmail.com"
+          git add README.md data-structures sql python databases linux-shell
+          git diff --cached --quiet && echo "No index changes." && exit 0
+          git commit -m "chore: rebuild index [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash && git push && break
+            echo "Retry $i..."
+            sleep 5
+          done
