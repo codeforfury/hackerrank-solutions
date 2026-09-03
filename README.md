@@ -4,13 +4,13 @@ Auto-synced from my HackerRank submissions.
 
 ## 📊 Stats
 
-**Total solved: 2**
+**Total solved: 3**
 
 - Data Structures: 1
 - Databases: 0
 - Linux Shell: 0
 - Python: 1
-- SQL: 0
+- SQL: 1
 
 ## 📁 Categories
 
