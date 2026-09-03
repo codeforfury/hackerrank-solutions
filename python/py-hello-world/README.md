@@ -1,6 +1,6 @@
 # Say "Hello, World!" With Python
 
-**Difficulty:** Unknown
+**Difficulty:** Easy
 **Category:** python
 **Language:** python3
 **Link:** https://www.hackerrank.com/challenges/py-hello-world/problem
@@ -51,14 +51,5 @@ Submit Code
 Run Code
 Upload Code as File
 Test against custom input
-Congratulations
-You solved this challenge. Would you like to challenge your friends?
-Share on X
-Share on LinkedIn
-Next Challenge
 Test case 0
-Compiler Message
-Success
-Expected Output
-Download
-Hello, World!
+Loading testcase ...
