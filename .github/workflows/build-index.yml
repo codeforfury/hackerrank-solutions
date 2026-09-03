@@ -1,5 +1,4 @@
 name: Build Index Files
-
 on:
   push:
     # Rebuild the index tables whenever a new solution is pushed
@@ -11,10 +10,11 @@ on:
       - "databases/**"
       - "linux-shell/**"
   workflow_dispatch: {}
-
 permissions:
   contents: write
-
+concurrency:
+  group: build-index
+  cancel-in-progress: true
 jobs:
   build-index:
     runs-on: ubuntu-latest
@@ -25,15 +25,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
       - name: Build index files
         run: python 0-scripts/build_index.py
-
       - name: Commit and push index
         run: |
           git config user.name "codeforfury"
