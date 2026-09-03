@@ -38,7 +38,7 @@ jobs:
         run: |
           git config user.name "codeforfury"
           git config user.email "dasrajiv6507@gmail.com"
-          git add README.md data-structures sql python databases linux-shell
+          git add -A
           git diff --cached --quiet && echo "No index changes." && exit 0
           git commit -m "chore: rebuild index [skip ci]"
           for i in 1 2 3 4 5; do
