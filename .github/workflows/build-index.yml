@@ -29,6 +29,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Fetch pending images
+        run: python 0-scripts/fetch_pending_images.py
       - name: Build index files
         run: python 0-scripts/build_index.py
       - name: Commit and push index
